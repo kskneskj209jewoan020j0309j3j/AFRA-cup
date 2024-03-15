@@ -235,7 +235,7 @@ body {
     }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 800px) {
     .hero-image {
         grid-row: 2;
     }
