@@ -237,10 +237,10 @@ body {
 
 @media (max-width: 639px) {
     .hero-image {
-        grid-row: 2;
-    }
-    .nav_menu{
         grid-row: 1;
+    }
+    .hero-img {
+        max-width: 30rem;
     }
 }
 
