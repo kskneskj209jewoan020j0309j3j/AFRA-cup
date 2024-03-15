@@ -13,44 +13,6 @@ scroll_btn.addEventListener('click', () => {
     });
 });
 
-async function fetchMatch() {
-    let match_by_date = document.querySelector('#match-date');
-    let match_by_group = document.querySelector('#match-group');
-    let data = await fetch('./fifa-world-cup.json');
-    let response = await data.json();
-    let all_match = [];
-
-    function randerDom(match, selector) {
-        selector.innerHTML += `
-        <div class="match">
-        <div class="match-info">
-            <h4 class="group">${match.group}</h4>
-            <h4>Match Number<span class="badge">${match.matchNumber}</span> </h4>
-        </div>
-        <div class="flags">
-            <div class="home-flag">
-                <img src="${match.home_flag}" alt="${match.home_team}" class="flag" />
-            <h3 class="home-team">${match.home_team}</h3>
-            </div>
-            <span class="vs">
-            VS
-            </span>
-            <div class="away-flag">
-            <img src="${match.away_flag}" alt="${match.away_team}" class="flag" />
-            <h3 class="home-team">${match.away_team}</h3>
-            </div>
-        </div>
-        <div class="time-area">
-            <div class="time">
-                <h4 class="month">${match.month}</h4>
-                <h4 class="day">${match.day}</h4>
-                <h4 class="date">${match.date}</h4>
-            </div>
-            <h4 class="match-time">${match.localTime}</h4>
-        </div>
-     </div>
-  `;
-    }
 
     for (let i = 0; i < response.length; i++) {
         let time = new Date(response[i]['DateUtc']);
@@ -101,5 +63,5 @@ async function fetchMatch() {
     for (let j = 0; j < filter_by_group.length; j++) {
         randerDom(filter_by_group[j], match_by_group);
     }
-}
+
 fetchMatch();
