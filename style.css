@@ -237,10 +237,7 @@ body {
 
 @media (max-width: 639px) {
     .hero-image {
-        grid-row: 1;
-    }
-    .hero-img {
-        max-width: 30rem;
+        grid-row: 2;
     }
 }
 
