@@ -239,6 +239,9 @@ body {
     .hero-image {
         grid-row: 2;
     }
+    .nav_menu{
+        grid-row: 1;
+    }
 }
 
 .standings-heading {
